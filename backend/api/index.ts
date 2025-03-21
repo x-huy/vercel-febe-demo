@@ -4,12 +4,12 @@ import { VercelRequest, VercelResponse } from "@vercel/node";
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get("/time", (req, res) => {
+app.get("/api/time", (req, res) => {
   const currentTime = new Date().toISOString();
   res.json({ time: currentTime });
 });
 
-app.get("/other", (req, res) => {
+app.get("/api/other", (req, res) => {
   res.json({ message: "This is another API" });
 });
 
